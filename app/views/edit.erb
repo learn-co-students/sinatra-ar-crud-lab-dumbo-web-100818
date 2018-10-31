@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Blog Post</title>
+  </head>
+
+  <body>
+  <form method="post" action="/posts/<%= @post.id %>">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+
+    <p>Name: <input type="text" name="name" value="<%=@post.name%>"></p>
+    <p>Enter your Blog Post:</p>
+    <textarea name="content"><%=@post.content%></textarea>
+    <br>
+    <button type="submit" value="submit">Submit</button>
+  </form>
+
+  </body>
+</html>
